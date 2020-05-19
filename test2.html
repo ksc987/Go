@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        function myFunction() {
+            var myTextValue = document.getElementById('myText').value;
+
+            if (myTextValue.length == 0) {
+                alert('Please enter a real text in the box.');
+                return;
+            }
+            // var myTitle = document.getElementById('h1Text');
+            // myTitle.innerHTML = myTextValue;
+            document.getElementById('h1Text').innerHTML = myTextValue;
+        }
+
+        function startPage() {
+            alert('This is a test onload message');
+
+        }
+
+        function myClock(){
+            var rightNow = new Date();
+            var currentHour = rightNow.getHours();
+            var currentTime = rightNow.getTime();
+            
+            alert(rightNow);
+            alert(currentHour);
+            alert(currentTime);
+            
+        }
+
+        function add(first, second, third){
+            return 'test...';
+        }
+
+        var myResult = add(1, 2, 3);
+        alert(myResult);
+    </script>
+</head>
+<body onload="startPage()">
+    <h1 id="h1Text">This is a test.</h1>
+
+    <input type="text" id="myText">
+    <input type="submit" value="Click Me..." onclick="myFunction()">
+    <input type="button" value="Time..." onclick="myClock()">
+</body>
+</html>
